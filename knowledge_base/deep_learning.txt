@@ -1,0 +1,87 @@
+DEEP LEARNING NOTES
+
+1. What is Deep Learning?
+Deep Learning is a part of Machine Learning that uses neural networks with multiple layers to learn complex patterns from data.
+
+2. Artificial Neuron
+A neuron receives inputs, multiplies them by weights, adds bias and passes the result through an activation function.
+
+Formula:
+z = w1x1 + w2x2 + b
+
+3. Weights
+Weights control how important an input is for the prediction.
+
+4. Bias
+Bias helps the neuron shift the activation and learn a better decision boundary.
+
+5. Activation Function
+An activation function adds non-linearity so the network can learn complex patterns.
+Common functions:
+- ReLU
+- Sigmoid
+- Tanh
+- Softmax
+
+6. Forward Propagation
+Input moves through the network layer by layer to produce the predicted output.
+
+7. Loss / Cost Function
+Loss measures the difference between actual output and predicted output.
+The model tries to minimize this loss.
+
+8. Backpropagation
+Backpropagation calculates how much each weight contributed to the error and sends this information backward through the network.
+
+9. Gradient Descent
+Gradient Descent updates model parameters in the direction that reduces the loss.
+Basic idea:
+New parameter = Old parameter - Learning Rate × Gradient
+
+10. Epoch
+One epoch means the model has processed the complete training dataset once.
+
+11. Batch Size
+Batch size is the number of training samples processed before one parameter update.
+
+12. Learning Rate
+Learning rate controls how large each model update is.
+Too high can make learning unstable.
+Too low can make learning very slow.
+
+13. Optimizers
+Optimizers improve the process of updating weights.
+Examples:
+- SGD
+- SGD with Momentum
+- RMSProp
+- Adam
+
+14. CNN
+Convolutional Neural Network is mainly used for image-related tasks.
+It learns useful patterns such as edges, shapes and objects.
+
+15. RNN
+Recurrent Neural Network is designed for sequential data and uses information from previous steps.
+
+16. LSTM
+Long Short-Term Memory is an RNN type designed to handle long-term dependencies better.
+
+17. Regularization
+Regularization reduces overfitting.
+Common techniques:
+- Dropout
+- L1/L2 regularization
+- Early stopping
+- Data augmentation
+
+18. Batch Normalization
+Batch Normalization normalizes activations during training.
+It can make training more stable and can help with gradient-related problems.
+
+19. Transfer Learning
+Transfer learning uses a pretrained model as a starting point for a new task.
+It can reduce training time and data requirements.
+
+20. Deep Learning Learning Flow
+Input → Neural Network → Forward Propagation → Prediction → Loss → Backpropagation → Optimizer → Weight Update → Repeat.

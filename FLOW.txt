@@ -1,0 +1,57 @@
+                  STUDENT
+                     │
+                     ▼
+              STREAMLIT APP
+                     │
+       ┌─────────────┼────────────────┼─────────────────┐
+       ▼             ▼                ▼                 ▼
+       ML          RESUME            RAG              AGENT
+       │             │                │                 │
+       │             ▼                ▼                 ▼
+       │        Transformer         Chroma             MCP
+       │             │                │                 │
+       │             ▼                ▼                 ▼
+       │         Skill Gap          Groq LLM        MCP Server
+       │             │                │                  │
+       │                              ▼                  │
+       │                            Career      ┌────────┼────────┐
+       │                           Answer       ▼        ▼        ▼
+       │                                        ML    Skill Gap   RAG
+       │
+       ▼
+ Package Prediction
+
+                  
+
+--------------------------------------------------------------
+
+                 Streamlit
+                    │
+                    ▼
+                 agent.py
+                    │
+                    ▼
+              mcp_client.py
+                    │
+                    ▼
+              mcp_server.py
+                    │
+        ┌───────────┼───────────┐
+        ▼           ▼           ▼
+   Placement      Skill Gap    RAG
+      Tool         Tool        Tool
+        │           │           │
+        ▼           ▼           ▼
+ predict.py    skill_gap.py   rag.py
+
+So Streamlit doesn't directly call the MCP server.
+----------------------------------------------------------------
+┌─────────────────────────────────────────────────┐
+│ 🎓 AI Student Career & Placement Assistant     |
+├─────────────────────────────────────────────────┤
+│                                                 │
+│  📊 Placement   📄 Resume   📚 RAG   🤖 Agent │
+│                                                 │
+│  Your application content                       │
+│                                                 │
+└─────────────────────────────────────────────────┘

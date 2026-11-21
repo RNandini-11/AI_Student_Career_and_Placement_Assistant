@@ -1,0 +1,100 @@
+MACHINE LEARNING NOTES
+
+1. What is Machine Learning?
+Machine Learning is a branch of AI where computers learn patterns from data and use those patterns to make predictions or decisions.
+
+2. Main Types
+Supervised Learning: learns from labeled data.
+Unsupervised Learning: finds patterns in unlabeled data.
+Reinforcement Learning: learns through rewards and penalties.
+
+3. Supervised Learning
+Regression predicts a continuous value.
+Example: predicting salary.
+Classification predicts a category.
+Example: predicting placed/not placed.
+
+4. Train-Test Split
+Training data is used to learn patterns.
+Test data is used to evaluate performance on unseen data.
+
+5. Data Preprocessing
+Common steps:
+- Handle missing values
+- Encode categorical data
+- Scale numerical data when needed
+- Handle outliers
+- Feature engineering
+
+6. Linear Regression
+Linear Regression predicts a continuous target using a linear relationship between features and target.
+Example: predicting salary from CGPA.
+
+7. Logistic Regression
+Logistic Regression is mainly used for classification.
+It predicts probability and commonly uses a threshold to assign a class.
+
+8. Decision Tree
+A Decision Tree makes decisions using a sequence of feature-based questions.
+It is easy to understand but can overfit.
+
+9. Random Forest
+Random Forest combines many decision trees and uses their results to make a stronger prediction.
+It usually reduces overfitting compared with a single tree.
+
+10. KNN
+K-Nearest Neighbors predicts using the closest training examples.
+It is sensitive to feature scale, so scaling is usually important.
+
+11. SVM
+Support Vector Machine finds a decision boundary that separates classes with a maximum margin.
+It can also be used for regression.
+
+12. K-Means
+K-Means is an unsupervised clustering algorithm that groups data into K clusters based on distance.
+
+13. DBSCAN
+DBSCAN groups dense points and can identify noise or outliers.
+It does not require choosing the number of clusters beforehand.
+
+14. Gradient Boosting
+Gradient Boosting builds models sequentially, where each new model tries to reduce previous errors.
+
+15. XGBoost
+XGBoost is an optimized gradient boosting algorithm that is powerful for structured/tabular data.
+
+16. PCA
+Principal Component Analysis reduces dimensions while trying to retain important variation in the data.
+
+17. Feature Engineering
+Feature engineering means creating or transforming features to make them more useful for a model.
+Example:
+cgpa_squared = cgpa ** 2
+
+18. Evaluation Metrics
+Classification:
+- Accuracy
+- Precision
+- Recall
+- F1-score
+
+Regression:
+- MAE
+- MSE
+- RMSE
+- R²
+- Adjusted R²
+
+19. Overfitting vs Underfitting
+Overfitting: model learns training data too closely and performs poorly on unseen data.
+Underfitting: model is too simple to learn important patterns.
+
+20. Cross Validation
+Cross-validation evaluates a model using multiple train-validation splits to get a more reliable performance estimate.
+
+21. Hyperparameters
+Hyperparameters are settings chosen before or during training.
+Examples: n_estimators, max_depth, learning_rate, K.
+
+22. Interview Flow
+Data → Cleaning → EDA → Feature Engineering → Split → Preprocessing → Model Training → Evaluation → Tuning → Prediction → Deployment.

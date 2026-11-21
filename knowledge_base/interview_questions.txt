@@ -1,0 +1,102 @@
+AI / DATA SCIENCE INTERVIEW QUESTIONS
+
+PYTHON
+1. What is Python?
+2. List vs tuple?
+3. What are the four pillars of OOP?
+4. What is a decorator?
+5. What is exception handling?
+6. What is shallow copy vs deep copy?
+7. What is NumPy?
+8. What is Pandas?
+9. What is a lambda function?
+10. What is MRO?
+
+SQL
+11. What is SQL?
+12. What is normalization?
+13. Difference between DELETE, TRUNCATE and DROP?
+14. What is a primary key?
+15. What is a foreign key?
+16. Explain INNER JOIN and LEFT JOIN.
+17. WHERE vs HAVING?
+18. What is a subquery?
+19. What is a CTE?
+20. What is an index?
+21. Find the second highest salary.
+22. What is a self join?
+
+MACHINE LEARNING
+23. What is Machine Learning?
+24. Supervised vs unsupervised learning?
+25. Regression vs classification?
+26. What is overfitting?
+27. What is underfitting?
+28. Why do we split data into train and test?
+29. What is feature engineering?
+30. Why is scaling needed?
+31. Explain Linear Regression.
+32. Explain Logistic Regression.
+33. Explain Decision Tree.
+34. Explain Random Forest.
+35. Explain KNN.
+36. Explain SVM.
+37. Explain K-Means.
+38. Explain DBSCAN.
+39. Explain Gradient Boosting.
+40. Explain XGBoost.
+41. What is PCA?
+42. What is cross-validation?
+43. What are hyperparameters?
+
+DEEP LEARNING
+44. What is Deep Learning?
+45. What is a neural network?
+46. What are weights and bias?
+47. What is an activation function?
+48. Explain forward propagation.
+49. What is loss?
+50. Explain backpropagation.
+51. What is Gradient Descent?
+52. What is an optimizer?
+53. What is an epoch?
+54. What is batch size?
+55. What is learning rate?
+56. CNN vs RNN?
+57. What is LSTM?
+58. What is dropout?
+59. What is batch normalization?
+60. What is transfer learning?
+
+PROJECT
+61. Explain your project.
+62. What problem does your project solve?
+63. What dataset did you use?
+64. What preprocessing did you perform?
+65. Which features did you use?
+66. Which model did you select and why?
+67. Which metrics did you use?
+68. How did you handle missing values?
+69. How did you prevent overfitting?
+70. How would you deploy the project?
+
+GENAI / RAG
+71. What is Generative AI?
+72. What is an LLM?
+73. What are embeddings?
+74. What is a vector database?
+75. What is RAG?
+76. What is the difference between RAG and fine-tuning?
+77. What is an AI agent?
+78. What is agentic AI?
+79. What is LangChain?
+
+CAREER ASSISTANT PROJECT
+80. Explain your AI Student Career and Placement Assistant.
+81. How does the placement prediction module work?
+82. How does resume text extraction work?
+83. How does the skill extraction module work?
+84. How are resume skills compared with career requirements?
+85. How does RAG provide career answers?
+86. Why did you use embeddings?
+87. How would you improve the system?

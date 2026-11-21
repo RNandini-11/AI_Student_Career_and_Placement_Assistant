@@ -1,0 +1,86 @@
+SQL NOTES FOR STUDENTS
+
+1. What is SQL?
+SQL stands for Structured Query Language.
+It is used to store, retrieve, update and manage data in relational databases.
+
+2. SQL Command Categories
+DDL: CREATE, ALTER, DROP, TRUNCATE
+DML: INSERT, UPDATE, DELETE
+DQL: SELECT
+DCL: GRANT, REVOKE
+TCL: COMMIT, ROLLBACK, SAVEPOINT
+
+3. SELECT
+SELECT is used to retrieve data.
+Example:
+SELECT * FROM employees;
+
+4. WHERE
+WHERE filters rows before grouping.
+Example:
+SELECT * FROM employees WHERE salary > 50000;
+
+5. GROUP BY
+GROUP BY creates groups for aggregate calculations.
+Example:
+SELECT department_id, AVG(salary)
+FROM employees
+GROUP BY department_id;
+
+6. HAVING
+HAVING filters groups after GROUP BY.
+Example:
+SELECT department_id, AVG(salary)
+FROM employees
+GROUP BY department_id
+HAVING AVG(salary) > 50000;
+
+7. Aggregate Functions
+COUNT(), SUM(), AVG(), MIN(), MAX()
+
+8. Joins
+INNER JOIN returns matching rows from both tables.
+LEFT JOIN returns all rows from the left table and matching rows from the right.
+RIGHT JOIN returns all rows from the right table and matching rows from the left.
+FULL OUTER JOIN returns matching and non-matching rows from both tables.
+SELF JOIN joins a table with itself.
+
+9. Primary Key vs Foreign Key
+Primary key uniquely identifies each row and cannot contain NULL.
+Foreign key refers to a key in another table and creates a relationship.
+
+10. Normalization
+Normalization organizes data to reduce redundancy and improve consistency.
+1NF: atomic values and no repeating groups.
+2NF: 1NF + no partial dependency.
+3NF: 2NF + no transitive dependency.
+BCNF: every determinant is a candidate key.
+
+11. DELETE vs TRUNCATE
+DELETE removes selected rows and can use WHERE.
+TRUNCATE removes all rows quickly and does not use WHERE.
+Transaction behavior can depend on the database system; in Oracle, TRUNCATE is DDL and cannot be rolled back.
+
+12. Subquery
+A subquery is a query inside another query.
+
+13. CTE
+A Common Table Expression uses WITH to create a temporary named result for one query.
+Example:
+WITH high_salary AS (
+    SELECT * FROM employees WHERE salary > 50000
+)
+SELECT * FROM high_salary;
+
+14. Second Highest Salary
+Example:
+SELECT MAX(salary)
+FROM employees
+WHERE salary < (SELECT MAX(salary) FROM employees);
+
+15. Index
+An index helps the database find rows faster, but indexes require storage and can slow INSERT/UPDATE/DELETE operations.
+
+16. Interview Keywords
+SELECT, WHERE, JOIN, GROUP BY, HAVING, subquery, CTE, normalization, index, primary key.

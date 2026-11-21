@@ -1,0 +1,25 @@
+Upload Project to GitHub
+
+First create a GitHub repository.
+
+For example:
+
+AI-Career-Assistant
+
+Then open your project folder in VS Code terminal.
+
+Step 1
+git init
+Step 2
+git add .
+Step 3
+git status
+Step 4
+git commit -m "AI Career Assistant complete project"
+Step 5
+Connect your GitHub repository: git remote add origin YOUR_GITHUB_REPOSITORY_URL
+Step 6
+git branch -M main
+Step 7
+git push -u origin main
+Now your project is on GitHub.

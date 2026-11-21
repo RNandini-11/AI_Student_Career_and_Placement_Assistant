@@ -1,0 +1,183 @@
+AI-Career-Assistant/
+│
+├── data/
+│   ├── raw/
+│   │   └── student_placement.csv
+│   │
+│   └── processed/
+│       ├── train_processed.csv
+│       └── test_processed.csv
+│
+├── models/
+│   └── placement_model.joblib
+│
+├── reports/
+│   ├── metrics.json
+│   └── figures/
+│       ├── actual_vs_predicted.png
+│       └── residuals.png
+│
+├── documents/
+│   ├── roadmap.txt
+│   ├── ml_notes.txt
+│   └── interview_questions.txt
+│
+├── src/
+│   ├── __init__.py
+│   │
+│   ├── config.py
+│   │
+│   ├── dataset.py
+│   │
+│   ├── features.py
+│   │
+│   ├── train.py
+│   │
+│   ├── predict.py
+│   │
+│   ├── resume_analyzer.py
+│   │
+│   ├── skill_gap.py
+│   │
+│   ├── rag.py
+│   │
+│   ├── tools.py
+│   │
+│   ├── agent.py
+│   │
+│   └── mcp_server.py
+│
+├── app.py
+│
+├── requirements.txt
+│
+└── .env
+
+
+-------------------------------------------------------------------
+
+RAG Flow:
+
+Knowledge Base
+      ↓
+Document Loading
+      ↓
+Text Splitting
+      ↓
+Chunks
+      ↓
+Embeddings
+      ↓
+Vector Database
+      ↓
+Retrieve Relevant Chunks
+      ↓
+LLM
+      ↓
+Final Answer
+
+
+-------------------------------------------------------------
+
+Final AI project:
+
+              AI-Career-Assistant
+                       │
+        ┌──────────────┼──────────────┐
+        ▼              ▼              ▼
+       ML             RAG        Resume Analysis
+        │              │              │
+        ▼              ▼              ▼
+ Package Prediction  Documents    Skill Gap
+        │              │              │
+        └──────────────┼──────────────┘
+                       ▼
+                     Agent
+                       │
+                       ▼
+                      MCP
+                       │
+                       ▼
+                     app.py
+
+
+----------------------------------------------------------------
+
+🧠 Complete project architecture
+
+After completing all phases, your project will look like:
+
+                         USER
+                           │
+                           ▼
+                    STREAMLIT APP
+                           │
+                           ▼
+                      AI AGENT
+                           │
+             ┌─────────────┼─────────────┐
+             │             │             │
+             ▼             ▼             ▼
+        Resume Tool    ML Prediction   Skill Gap
+             │             │             │
+             └─────────────┼─────────────┘
+                           │
+                           ▼
+                          MCP
+                           │
+             ┌─────────────┼─────────────┐
+             ▼             ▼             ▼
+          Resume          ML            Jobs
+           Tool          Tool           Tool
+                           │
+                           ▼
+                         RAG
+                           │
+                     Vector Database
+                           │
+                           ▼
+                          LLM
+                           │
+                           ▼
+                    FINAL ANSWER
+
+
+RAG:
+RAG helps the LLM retrieve relevant information from a knowledge base before generating an answer.
+
+AI Agent:
+An AI Agent can decide what action to take and which tools to use to complete a task.
+
+MCP:
+MCP is a standard protocol that allows AI applications to connect with and use external tools and data.
+
+Your project in one line
+RAG gives the Agent knowledge, tools give the Agent capabilities, and the Agent decides how to use those capabilities to complete the student's task.
+
+-------------------------------------
+
+Where MCP comes in
+
+After your Agent works properly, then add MCP.
+
+Without MCP:
+
+AI Agent
+   ↓
+Python Functions
+
+With MCP:
+
+AI Agent
+   ↓
+MCP
+   ↓
+Tools
+ ┌──────────────┬──────────────┬──────────────┐
+ ↓              ↓              ↓              ↓
+Resume       Placement      Skill Gap        RAG 
+Tool         Tool           Tool             Tool
+
+MCP gives a standard way for the AI application to discover and use tools.
+So don't start MCP before your Agent works.
+------------------------------

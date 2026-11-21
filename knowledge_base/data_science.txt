@@ -1,0 +1,84 @@
+DATA SCIENCE NOTES
+
+1. What is Data Science?
+Data Science is the process of using data, statistics, programming and Machine Learning to extract useful insights and support decisions.
+
+2. Data Science Workflow
+Problem Understanding
+→ Data Collection
+→ Data Cleaning
+→ EDA
+→ Feature Engineering
+→ Model Building
+→ Evaluation
+→ Deployment
+→ Monitoring
+
+3. Data Collection
+Data can come from CSV files, databases, APIs, websites, sensors or cloud storage.
+
+4. Data Cleaning
+Common tasks:
+- Missing value handling
+- Duplicate removal
+- Data type correction
+- Outlier checking
+- Inconsistent value correction
+
+5. EDA
+Exploratory Data Analysis helps understand the dataset using statistics and visualizations.
+
+6. Univariate Analysis
+Analysis of one variable.
+Example: distribution of Age.
+
+7. Bivariate Analysis
+Analysis of two variables.
+Examples:
+- Numeric + Numeric: scatter plot
+- Numeric + Categorical: box plot
+- Categorical + Categorical: count plot / cross-tab
+
+8. Correlation
+Correlation measures the strength and direction of a relationship between numerical variables.
+A heatmap can show correlations between multiple numerical features.
+
+9. Feature Engineering
+Feature engineering creates useful features from existing data.
+Example:
+cgpa_squared = cgpa ** 2
+
+10. Data Visualization
+Common libraries:
+- Matplotlib
+- Seaborn
+- Plotly
+
+11. Statistics
+Mean: average value.
+Median: middle value after sorting.
+Mode: most frequent value.
+Standard deviation: measures spread around the mean.
+
+12. Machine Learning in Data Science
+ML can be used for:
+- Prediction
+- Classification
+- Clustering
+- Recommendation
+- Anomaly detection
+
+13. Model Evaluation
+Choose metrics based on the problem.
+Classification: accuracy, precision, recall, F1.
+Regression: MAE, RMSE, R².
+
+14. Data Analyst vs Data Scientist
+Data Analyst mainly focuses on analyzing data, dashboards, reports and business questions.
+Data Scientist commonly works on statistics, Machine Learning, prediction and advanced analytics.
+
+15. Tools
+Python, SQL, Excel, Power BI, Tableau, Pandas, NumPy, Scikit-learn.
+
+16. Interview Summary
+Data Science = Data + Statistics + Programming + Machine Learning + Communication.

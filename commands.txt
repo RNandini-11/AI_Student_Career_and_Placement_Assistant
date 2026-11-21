@@ -1,0 +1,37 @@
+commands to deploy on docker:
+-----------------------------
+
+1. Build the Docker image
+docker build -t ai-career-assistant .
+docker build -t ai-career-assistant -f deployment/Dockerfile .
+
+
+2. Run the container
+docker run -p 8080:8080 --env-file .env ai-career-assistant
+
+3. Open browser
+http://localhost:8080
+
+
+If later you want to run your MCP server again, 
+you can create a new container from the existing image without rebuilding:
+
+--> docker run -p 8000:8000 mcp-server
+
+
+Deployment flow:
+---------------
+
+Your Project
+     ↓
+Dockerfile
+     ↓
+docker build
+     ↓
+Docker Image
+     ↓
+Docker Container
+     ↓
+Streamlit App
+     ↓
+Deploy to Cloud

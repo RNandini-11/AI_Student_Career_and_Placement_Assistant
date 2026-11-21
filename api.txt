@@ -1,0 +1,221 @@
+                    FastAPI
+                       │
+       ┌───────────────┼────────────────┐
+       │               │                │
+       ↓               ↓                ↓
+   /predict       /resume-analysis   /skill-gap
+       │               │                │
+       ↓               ↓                ↓
+   ML Model       PDF + Skills     Skill Matching
+       
+       ┌───────────────────────────────┐
+       │                               │
+       ↓                               ↓
+/career-question                    /agent
+       │                               │
+       ↓                               ↓
+      RAG                         AI Agent + MCP
+       │                               │
+       ↓                               ↓
+Chroma + Groq                    Tools + ML/RAG
+
+
+---for api:
+fastapi
+uvicorn
+
+---sample for checking:
+
+from fastapi import FastAPI
+
+app = FastAPI(
+    title="AI Student Career Assistant API",
+    description="Backend API for the AI Student Career and Placement Assistant",
+    version="1.0.0"
+)
+
+
+@app.get("/")
+def home():
+    return {
+        "message": "AI Student Career Assistant API is running"
+    }
+
+
+@app.get("/health")
+def health_check():
+    return {
+        "status": "healthy"
+    }
+
+--------------------------------------------------------------------
+
+---Run FastAPI:
+uvicorn api.main:app --reload
+
+--Test Swagger UI
+FastAPI automatically provides documentation.
+
+Open: http://127.0.0.1:8000/docs
+
+--Add your ML prediction API:
+ans same steps like before
+---------------------------------------------------------------------
+
+Memory trick:
+GET → usually get/read data
+POST → send input to the server
+
+POST → used when the user sends/upload data.
+/resume-analysis → URL of our API.
+
+---------------------------------------------------------------
+Step 8 — Why we use BaseModel
+1. Checks the type: It makes sure the user sends a number (like 8.2) and not text (like "excellent").
+2. Prevents errors: If the data is wrong, it automatically blocks it and sends back a helpful error message before your code can crash
+
+This:
+class StudentInput(BaseModel):
+    cgpa: float
+defines the input expected by the API.
+For example:
+{
+    "cgpa": 8.2
+}
+FastAPI validates that cgpa is a number.
+
+---------------------------------------------------------------------------
+
+UploadFile	            📥 Receive file
+File()	                📄 Tell FastAPI it's a file
+async/await	            ⏳ Handle waiting efficiently
+NamedTemporaryFile()	🗂️ Temporarily save file
+
+FastAPI       → creates API
+UploadFile    → receives uploaded file
+File()        → tells FastAPI it's a file
+HTTPException → returns an error
+
+-------------------------------------------------------------------
+Since you want this as an end-to-end AI project, I suggest:
+
+Step 1: Current Streamlit app ✅
+Step 2: Add FastAPI backend
+Step 3: Test APIs using Swagger /docs
+Step 4: Connect Streamlit → FastAPI
+Step 5: Dockerize FastAPI + Streamlit
+Step 6: Deploy(Cloud Deployment)
+
+------------------------------------------------------------
+
+step 4:- Connect Streamlit → FastAPI
+    Streamlit
+    ↓
+    predict_placement()
+
+Now:
+    Streamlit
+    ↓
+    requests.post()
+    ↓
+    FastAPI /predict
+    ↓
+    predict_placement()
+
+So requests is the bridge between Streamlit and FastAPI.
+
+Think of it like:
+
+                    HTTP
+Streamlit ───────────────────→ FastAPI
+           requests.post()
+
+                    HTTP
+Streamlit ←─────────────────── FastAPI
+              response
+
+Do not delete your src functions. They are still used by FastAPI. You're only removing their direct use from Streamlit.
+
+-----------------------------------------------------------------------
+Step 5: Dockerize FastAPI + Streamlit.
+
+Your current setup is:
+
+Streamlit
+   ↓
+FastAPI
+   ↓
+ML / RAG / Agent / MCP
+
+We need Docker to run both Streamlit and FastAPI.
+
+Step 5 plan
+
+We'll do it in this order:
+1. Create a FastAPI Docker setup
+2. Create a Streamlit Docker setup
+3. Use Docker Compose to run both together
+4. Test Streamlit → FastAPI inside Docker
+5. Then prepare for cloud deployment
+
+I recommend Docker Compose rather than trying to run both applications inside one container because you have two separate services:
+
+┌──────────────────────┐
+│ Streamlit Container  │
+│ Port 8501            │
+└──────────┬───────────┘
+           │
+           ↓
+┌──────────────────────┐
+│ FastAPI Container    │
+│ Port 8000            │
+└──────────┬───────────┘
+           ↓
+      ML / RAG / Agent
+
+Step 1: Update your Streamlit app.py
+Find this line: API_URL = "http://127.0.0.1:8000"
+Change it to exactly this: API_URL = "http://fastapi:8000"
+why:
+    - Streamlit talks to FastAPI internally using http://fastapi:8000.
+    - You talk to Streamlit from your desktop browser using http://localhost:8501.
+    - 127.0.0.1 is just the numerical IP address for localhost—they point to the exact same place (your own computer).
+
+Step 2: Create the docker-compose.yml File
+We use a .yml (YAML) file because it is human-readable, simple, and clean
+
+Step 3: Build and Launch the Containers
+--Build the Docker images:
+    - docker compose build
+    - docker compose build --no-cache
+
+--Start the application containers:
+docker compose up 
+when deleting
+docker compose down (then delete) 
+
+
+You should have:
+    FastAPI  → http://localhost:8000
+    Swagger  → http://localhost:8000/docs
+
+    Streamlit → http://localhost:8501
+
+Step 4: Verify the Application is Running
+Once the terminal logs stabilize, open your web browser to check both applications:
+-- a. Streamlit Frontend: Go to http://localhost:8501
+-- b. FastAPI Interactive Documentation (Swagger): Go to http://localhost:8000/docs
+
+
+Step 5: open http://localhost:8502
+
+***
+compose:
+We use Docker Compose when we need to 'manage two or more containers at the same time'.
+***
+
+***
+why 2 containers:
+We decide to make two containers 
+because the "frontend" and the "backend" have completely different jobs.
+***

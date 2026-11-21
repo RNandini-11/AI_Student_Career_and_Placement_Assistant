@@ -1,0 +1,81 @@
+PYTHON NOTES FOR STUDENTS
+
+1. What is Python?
+Python is a high-level, interpreted, general-purpose programming language.
+It is easy to read and widely used in Data Science, Machine Learning, Web Development and Automation.
+
+2. Variables and Data Types
+A variable stores a value.
+Common data types:
+- int: 10
+- float: 10.5
+- str: "Python"
+- bool: True / False
+- list: [1, 2, 3]
+- tuple: (1, 2, 3)
+- set: {1, 2, 3}
+- dict: {"name": "Raj", "age": 22}
+
+3. List vs Tuple
+List is mutable, so its values can be changed.
+Tuple is immutable, so its values cannot be changed.
+Example:
+numbers = [10, 20, 30]
+numbers[0] = 100
+
+4. Conditions
+if, elif and else are used for decision making.
+Example:
+age = 20
+if age >= 18:
+    print("Adult")
+else:
+    print("Minor")
+
+5. Loops
+for loop is commonly used when iterating over a sequence.
+while loop runs while a condition is True.
+
+6. Functions
+A function is a reusable block of code.
+Example:
+def add(a, b):
+    return a + b
+
+7. OOP
+Object-Oriented Programming organizes code using classes and objects.
+Main pillars:
+- Encapsulation
+- Inheritance
+- Polymorphism
+- Abstraction
+
+8. Exception Handling
+try, except, else and finally help handle runtime errors.
+Example:
+try:
+    x = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+
+9. Decorator
+A decorator adds extra behavior to a function without changing its main code.
+
+10. Lambda
+Lambda is a small anonymous function.
+Example:
+square = lambda x: x * x
+
+11. Important Libraries
+- NumPy: numerical operations and arrays
+- Pandas: data manipulation and analysis
+- Matplotlib: data visualization
+- Scikit-learn: Machine Learning
+- Tkinter: GUI applications
+
+12. Shallow vs Deep Copy
+Shallow copy copies the outer object but may share nested objects.
+Deep copy creates independent copies of nested objects.
+
+13. Interview Keywords
+Readable, interpreted, dynamically typed, object-oriented, high-level, versatile.

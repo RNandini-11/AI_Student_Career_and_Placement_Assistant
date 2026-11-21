@@ -1,0 +1,28 @@
+Machine Learning Interview Questions
+------------------------------------
+
+What is Machine Learning?
+
+What is supervised learning?
+
+What is classification?
+
+What is regression?
+
+What is overfitting?
+
+What is cross-validation?
+
+What is feature engineering?
+
+What is precision?
+
+What is recall?
+
+What is F1-score?
+
+What is the pretrained model?
+-> Sentence Transformer is a pretrained Transformer-based Deep Learning model that converts text into numerical embeddings.
+
+What is an embedding?
+-> An embedding is a numerical vector that represents the meaning of text.

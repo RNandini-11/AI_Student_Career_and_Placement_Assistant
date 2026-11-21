@@ -1,0 +1,184 @@
+CAREER ROADMAP — AI / DATA SCIENCE
+
+GOAL
+Build strong skills for an entry-level Data Science / AI role and gradually move toward advanced AI and Data Scientist responsibilities.
+
+PHASE 1 — PYTHON
+Learn:
+- Python basics
+- Variables and data types
+- Conditions and loops
+- Functions
+- Strings and collections
+- OOP
+- Exception handling
+- File handling
+- NumPy
+- Pandas
+- Matplotlib
+
+Practice:
+Build small Python projects such as billing systems, data analysis scripts and automation programs.
+
+PHASE 2 — SQL
+Learn:
+- SELECT
+- WHERE
+- GROUP BY
+- HAVING
+- Aggregate functions
+- Joins
+- Subqueries
+- CTEs
+- Window functions
+- Primary and foreign keys
+- Normalization
+- Indexes
+- Query optimization
+
+Practice:
+Solve SQL problems using employee, hospital, sales and customer datasets.
+
+PHASE 3 — DATA ANALYSIS
+Learn:
+- Data cleaning
+- EDA
+- Statistics
+- Data visualization
+- Feature engineering
+- Power BI
+- Tableau
+
+Projects:
+Create dashboards for sales, customers, investment analysis and other real datasets.
+
+PHASE 4 — MACHINE LEARNING
+Learn:
+- Supervised learning
+- Unsupervised learning
+- Regression
+- Classification
+- Clustering
+- Feature engineering
+- Preprocessing
+- Model evaluation
+- Cross-validation
+- Hyperparameter tuning
+
+Important algorithms:
+Linear Regression
+Logistic Regression
+Decision Tree
+Random Forest
+KNN
+SVM
+K-Means
+DBSCAN
+Gradient Boosting
+XGBoost
+PCA
+
+PHASE 5 — END-TO-END ML
+Project flow:
+Problem Definition
+→ Data Collection
+→ Cleaning
+→ EDA
+→ Feature Engineering
+→ Train-Test Split
+→ Preprocessing Pipeline
+→ Model Training
+→ Evaluation
+→ Hyperparameter Tuning
+→ Save Model
+→ Prediction
+→ Deployment
+
+PHASE 6 — DEEP LEARNING
+Learn:
+- Neural networks
+- Perceptron
+- Weights and bias
+- Activation functions
+- Forward propagation
+- Loss
+- Backpropagation
+- Gradient Descent
+- Optimizers
+- Regularization
+- CNN
+- RNN
+- LSTM
+- Transfer learning
+
+PHASE 7 — NLP / GENAI
+Learn:
+- NLP basics
+- Transformers
+- Tokenization
+- Embeddings
+- LLMs
+- Prompt engineering
+- LangChain
+- Vector databases
+- RAG
+- Fine-tuning basics
+
+PHASE 8 — AI AGENTS
+Learn:
+- Tools
+- Tool calling
+- Memory concepts
+- Planning
+- Agent workflows
+- Agentic AI
+- MCP basics
+
+PHASE 9 — DEPLOYMENT
+Learn:
+- Streamlit
+- Flask / FastAPI basics
+- Git and GitHub
+- Environment variables
+- Model saving/loading
+- Basic cloud deployment
+
+PHASE 10 — MAIN PROJECT
+AI Student Career and Placement Assistant
+
+Possible modules:
+1. Student placement prediction
+2. Resume PDF upload
+3. Resume text extraction
+4. Skill extraction
+5. Skill profile generation
+6. Skill-gap analysis
+7. Career roadmap
+8. Career Q&A using RAG
+9. Interview question generation
+10. AI agent for career assistance
+11. Streamlit user interface
+
+FINAL INTERVIEW PREPARATION
+Revise:
+Python + SQL + Statistics + Data Analysis + ML + DL + GenAI + Project.
+
+For every algorithm, prepare:
+Definition
+How it works
+Example
+When to use
+When to avoid
+Important parameters
+Evaluation metrics
+
+For the main project, prepare:
+Problem
+Dataset
+Architecture
+Preprocessing
+Model
+Results
+Challenges
+Future improvements
+Deployment
