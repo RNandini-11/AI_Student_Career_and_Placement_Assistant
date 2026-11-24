@@ -1,0 +1,28 @@
+name: Contributor Documentation CI
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  documentation-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate contributor guide
+        run: |
+          test -f CONTRIBUTING.md
+          grep -q "## Branching Strategy" CONTRIBUTING.md
+          grep -q "## Development Workflow" CONTRIBUTING.md
+          grep -q "## Commit Messages" CONTRIBUTING.md
+          grep -q "## Pull Request Guidelines" CONTRIBUTING.md
+
+      - name: Validate whitespace
+        run: git diff --check
